@@ -86,7 +86,7 @@ public class LinkedList<E> {
         cur.e = e;
     }
 
-    public boolean find(E e){
+    public boolean contains(E e){
         Node cur = dummyHead.next;
         while(cur != null){
             if(cur.e == e){
@@ -97,6 +97,29 @@ public class LinkedList<E> {
         return false;
     }
 
+
+    public E remove(int index){
+        if(index < 0 || index > size)
+            throw new IllegalArgumentException("out of the range.");
+        Node cur = dummyHead;
+        for(int i = 0; i < index ;i++){
+            cur = cur.next;
+        }
+        Node retNode = cur.next;
+        cur.next = retNode.next;
+        retNode.next = null;
+        size--;
+        return  retNode.e;
+    }
+
+    public E removeFirst(){
+        return remove(0);
+    }
+
+    public E removeLast(){
+        return remove(size-1);
+    }
+
     public String print() {
         StringBuilder s = new StringBuilder();
         Node cur = dummyHead.next;
@@ -104,7 +127,7 @@ public class LinkedList<E> {
             s.append(cur.e + "->");
             cur = cur.next;
         }
-        s.append("NULL");
+        s.append("NULL tail");
         return s.toString();
     }
 
