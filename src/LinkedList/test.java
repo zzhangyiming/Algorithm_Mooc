@@ -8,8 +8,7 @@ public class test {
         linkedList.addLast("b");
         linkedList.addLast("c");
         linkedList.addLast("d");
-        linkedList.set(1,"张一鸣");
-        linkedList.addFirst("超级帅");
+
         System.out.println(linkedList.print());
     }
 }
