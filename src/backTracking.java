@@ -5,5 +5,8 @@ public class backTracking {
      * 2.条件
      * 3.约束
      */
+	public static void main(String[] args){
+		System.out.println("fuck you");
+}
 
 }

@@ -1,5 +1,7 @@
 package LeetCode;
 
+import java.util.*;
+
 public class LongestPalindromicSubstring {
     /**
      *
@@ -39,9 +41,16 @@ public class LongestPalindromicSubstring {
         return R - L - 1;
     }
     public static void main(String[] args){
+        List<Integer> res = new ArrayList<>();
+       int[] a = {1,2,3,4,5};
+       int[] b = {1,5,3,4,2};
+        Map<Character,Integer> freq_s = new HashMap<>();
+        Map<Character,Integer> freq_p = new HashMap<>();
+        freq_s.put('a',1);
+        freq_p.put('a',1);
 
-        String s = "babad";
-        String c = longestPalindrome(s);
-        System.out.print(c);
+        System.out.println(freq_p.get('a'));
+        System.out.println(freq_p.getOrDefault('a',0));
+
     }
 }

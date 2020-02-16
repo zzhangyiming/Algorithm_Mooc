@@ -19,8 +19,21 @@ public class test {
         return n <0 ? 1/res : res;
 
     }
-    public static void main(String[] args){
+    public String replaceSpace(String s) {
+        StringBuffer str = new StringBuffer("");
+        for(int i = 0 ;i < s.length(); i++){
+            if(s.charAt(i) == ' '){
+                str.append("%20");
+            }else{
+                str.append(s.charAt(i));
+            }
+        }
+        return str.toString();
+    }
 
-        System.out.println(myPow(4,2));
+
+    public static void main(String[] args){
+       int[] arr = new int[4];
+
     }
 }

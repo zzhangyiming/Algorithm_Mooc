@@ -131,4 +131,17 @@ public class LinkedList<E> {
         return s.toString();
     }
 
+    public E removeElement(E e){
+        Node cur = dummyHead.next;
+        while(cur != null){
+            if(cur.next.e == e){
+                cur = cur.next.next;
+                cur.next = null;
+            }
+            cur = cur.next;
+        }
+        return e;
+    }
+
+
 }

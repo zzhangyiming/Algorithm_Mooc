@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class BST<E extends Comparable<E>> {
-     public ArrayList ll = new ArrayList();
+
     private class Node {
         public E e;
         public Node left, right;
@@ -94,11 +94,8 @@ public class BST<E extends Comparable<E>> {
 
     // 中序遍历以node为根的二分搜索树, 递归算法
     private void inOrder(Node node){
-       Stack<Integer> s = new Stack<>();
-
         if(node == null)
           return;
-
         inOrder(node.left);
         System.out.println(node.e);
         inOrder(node.right);
@@ -173,4 +170,6 @@ public class BST<E extends Comparable<E>> {
         bst.postOrder();
         System.out.println();
     }
+
+
 }
